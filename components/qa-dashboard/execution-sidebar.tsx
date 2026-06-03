@@ -1,7 +1,8 @@
 "use client"
 
-import { Check, X, Clock, Play } from "lucide-react"
+import { Check, X, Clock, Play, Webhook } from "lucide-react"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 export interface Execution {
   id: string
@@ -55,6 +56,15 @@ export function ExecutionSidebar({ executions, selectedId, onSelect }: Execution
             </div>
           </button>
         ))}
+      </div>
+      <div className="p-4 border-t border-sidebar-border">
+        <Link
+          href="/webhook"
+          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-sidebar-foreground transition-colors"
+        >
+          <Webhook className="h-4 w-4" />
+          Integração de Webhook
+        </Link>
       </div>
     </aside>
   )
