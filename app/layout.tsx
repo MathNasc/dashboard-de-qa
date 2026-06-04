@@ -1,14 +1,23 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'QA Dashboard - Monitoramento de Automações',
-  description: 'Dashboard de monitoramento de QA para automações de software',
+  title: 'AutoOps — Observabilidade de Automações',
+  description:
+    'Plataforma de observabilidade e monitoramento de automações corporativas (QA, RPA e Bots de Processos)',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -35,8 +44,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className="font-sans antialiased bg-background">
+    <html lang="pt-BR" className="dark">
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-background`}
+      >
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
