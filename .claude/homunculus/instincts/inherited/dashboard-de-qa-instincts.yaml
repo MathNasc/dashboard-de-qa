@@ -1,0 +1,317 @@
+# Instincts generated from https://github.com/MathNasc/dashboard-de-qa
+# Generated: 2026-06-08T19:38:47.088Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: dashboard-de-qa-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Commit Length
+
+## Action
+
+Keep commit messages concise (~12 characters)
+
+## Evidence
+
+- Average commit message length: 12 chars
+- Based on 1 commits
+
+---
+id: dashboard-de-qa-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: dashboard-de-qa-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: dashboard-de-qa-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: dashboard-de-qa-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: components, hooks, lib, routes
+
+---
+id: dashboard-de-qa-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: dashboard-de-qa-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct File Naming
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: dashboard-de-qa-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: dashboard-de-qa-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: dashboard-de-qa-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: dashboard-de-qa-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Import Style
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: dashboard-de-qa-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: dashboard-de-qa-instinct-error-handling
+trigger: "When handling errors in code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Error Handling
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Pattern in errorHandling.style
+
+---
+id: dashboard-de-qa-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Test Location
+
+## Action
+
+Place tests in a separate folder from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: dashboard-de-qa-instinct-module-organization
+trigger: "When organizing new modules or files"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Module Organization
+
+## Action
+
+Organize by type (e.g., components, hooks, lib, routes)
+
+## Evidence
+
+- Pattern in architecture.folderStructure.srcLayout
+
+---
+id: dashboard-de-qa-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: MathNasc/dashboard-de-qa
+---
+
+# Dashboard De Qa Instinct Commit Format
+
+## Action
+
+Use a freeform commit message without a required prefix
+
+## Evidence
+
+- Pattern in commits.type
+- Example: 'add features'
+
